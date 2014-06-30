@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>M101P Courseware</title>
+
+  <link rel="icon" type="image/x-icon" href="https://university.mongodb.com/static/images/favicon.7d83e8e6c089.ico">
+  <link href="hello_world.tpl_files/css.css" rel="stylesheet" type="text/css">
+
+  
+    <link href="hello_world.tpl_files/lms-application.css" rel="stylesheet" type="text/css">
+
+
+
+
+  
+    <script async="" src="hello_world.tpl_files/www-widgetapi-vflIiuTGJ.js" id="www-widgetapi-script"></script><script src="hello_world.tpl_files/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="hello_world.tpl_files/lms-main_vendor.js" charset="utf-8"></script>
+
+
+  
+  
+    <link href="hello_world.tpl_files/lms-course.css" rel="stylesheet" type="text/css">
+
+
+
+  
+
+<script type="text/javascript" src="hello_world.tpl_files/split.js"></script>
+<script type="text/javascript" src="hello_world.tpl_files/jquery_006.js"></script>
+<script type="text/javascript" src="hello_world.tpl_files/Markdown_003.js"></script>
+<script type="text/javascript" src="hello_world.tpl_files/Markdown_002.js"></script>
+<script type="text/javascript" src="hello_world.tpl_files/Markdown.js"></script>
+<script type="text/javascript" src="hello_world.tpl_files/jquery_004.js"></script>
+<script type="text/javascript" src="hello_world.tpl_files/jquery_003.js"></script>
+<script type="text/javascript" src="hello_world.tpl_files/jquery.js"></script>
+<script type="text/javascript" src="hello_world.tpl_files/mustache.js"></script>
+<script type="text/javascript" src="hello_world.tpl_files/URI.js"></script>
+<script type="text/javascript" src="hello_world.tpl_files/underscore-min.js"></script>
+<script type="text/javascript" src="hello_world.tpl_files/backbone-min.js"></script>
+
+<link href="hello_world.tpl_files/jquery.css" rel="stylesheet" type="text/css">
+<link href="hello_world.tpl_files/jquery_002.css" rel="stylesheet" type="text/css">
+
+  <script src="hello_world.tpl_files/sticky_footer_002.js"></script>
+  <script type="text/javascript" src="hello_world.tpl_files/mongoWebShell.js"></script>
+
+
+  <!--[if lt IE 9]>
+  <script src="/static/js/html5shiv.d5e37d8ee1a4.js"></script>
+  <![endif]-->
+
+  <!--[if lte IE 9]>
+  
+    <link href="/static/css/lms-ie.ede23fb35c36.css" rel="stylesheet" type="text/css" />
+
+
+
+  <![endif]-->
+
+  <meta name="path_prefix" content="">
+  <meta name="description" content="Free Online Classes on MongoDB from MongoDB, Inc.">
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-7301842-12']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+
+  </script>
+  <script type="text/javascript" src="hello_world.tpl_files/sticky_footer.js"></script>
+
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuTitle {background-color: #CCCCCC; margin: -1px -1px 1px -1px; text-align: center; font-style: italic; font-size: 80%; color: #444444; padding: 2px 0; overflow: hidden}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">DIV.MathJax_MathML {text-align: center; margin: .75em 0px}
+.MathJax_MathML {font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; border: 0; padding: 0; margin: 0}
+span.MathJax_MathML {display: inline}
+div.MathJax_MathML {display: block}
+.MathJax_mmlExBox {display: block; overflow: hidden; height: 1px; width: 60ex; padding: 0; border: 0; margin: 0}
+[mathvariant="double-struck"] {font-family: MathJax_AMS, MathJax_AMS-WEB}
+[mathvariant="script"] {font-family: MathJax_Script, MathJax_Script-WEB}
+[mathvariant="fraktur"] {font-family: MathJax_Fraktur, MathJax_Fraktur-WEB}
+[mathvariant="bold-script"] {font-family: MathJax_Script, MathJax_Caligraphic-WEB; font-weight: bold}
+[mathvariant="bold-fraktur"] {font-family: MathJax_Fraktur, MathJax_Fraktur-WEB; font-weight: bold}
+[mathvariant="monospace"] {font-family: monospace}
+[mathvariant="sans-serif"] {font-family: sans-serif}
+[mathvariant="bold-sans-serif"] {font-family: sans-serif; font-weight: bold}
+[mathvariant="sans-serif-italic"] {font-family: sans-serif; font-style: italic}
+[mathvariant="sans-serif-bold-italic"] {font-family: sans-serif; font-style: italic; font-weight: bold}
+[class="MJX-tex-oldstyle"] {font-family: MathJax_Caligraphic, MathJax_Caligraphic-WEB}
+[class="MJX-tex-oldstyle-bold"] {font-family: MathJax_Caligraphic, MathJax_Caligraphic-WEB; font-weight: bold}
+[class="MJX-tex-caligraphic"] {font-family: MathJax_Caligraphic, MathJax_Caligraphic-WEB}
+[class="MJX-tex-caligraphic-bold"] {font-family: MathJax_Caligraphic, MathJax_Caligraphic-WEB; font-weight: bold}
+@font-face /*1*/ {font-family: MathJax_AMS-WEB; src: url('https://university.mongodb.com/static/js/vendor/mathjax-MathJax-24a378e/fonts/HTML-CSS/TeX/otf/MathJax_AMS-Regular.otf')}
+@font-face /*2*/ {font-family: MathJax_Script-WEB; src: url('https://university.mongodb.com/static/js/vendor/mathjax-MathJax-24a378e/fonts/HTML-CSS/TeX/otf/MathJax_Script-Regular.otf')}
+@font-face /*3*/ {font-family: MathJax_Fraktur-WEB; src: url('https://university.mongodb.com/static/js/vendor/mathjax-MathJax-24a378e/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Regular.otf')}
+@font-face /*4*/ {font-family: MathJax_Caligraphic-WEB; src: url('https://university.mongodb.com/static/js/vendor/mathjax-MathJax-24a378e/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf')}
+@font-face /*5*/ {font-family: MathJax_Fraktur-WEB; font-weight: bold; src: url('https://university.mongodb.com/static/js/vendor/mathjax-MathJax-24a378e/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Bold.otf')}
+@font-face /*6*/ {font-family: MathJax_Caligraphic-WEB; font-weight: bold; src: url('https://university.mongodb.com/static/js/vendor/mathjax-MathJax-24a378e/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Bold.otf')}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; border: 0; padding: 0; margin: 0}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0 !important; padding: 0 !important; margin: 0 !important; vertical-align: 0 !important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap ! important}
+.MathJax img {display: inline ! important; float: none ! important}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block; overflow: hidden; width: 1px; height: 60ex}
+.MathJax .MathJax_EmBox {display: block; overflow: hidden; width: 1px; height: 60em}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('https://university.mongodb.com/static/js/vendor/mathjax-MathJax-24a378e/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff') format('woff'), url('https://university.mongodb.com/static/js/vendor/mathjax-MathJax-24a378e/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Main; src: url('https://university.mongodb.com/static/js/vendor/mathjax-MathJax-24a378e/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff') format('woff'), url('https://university.mongodb.com/static/js/vendor/mathjax-MathJax-24a378e/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf') format('opentype'); font-weight: bold}
+@font-face {font-family: MathJax_Main; src: url('https://university.mongodb.com/static/js/vendor/mathjax-MathJax-24a378e/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff') format('woff'), url('https://university.mongodb.com/static/js/vendor/mathjax-MathJax-24a378e/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Math; src: url('https://university.mongodb.com/static/js/vendor/mathjax-MathJax-24a378e/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff') format('woff'), url('https://university.mongodb.com/static/js/vendor/mathjax-MathJax-24a378e/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Caligraphic; src: url('https://university.mongodb.com/static/js/vendor/mathjax-MathJax-24a378e/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff') format('woff'), url('https://university.mongodb.com/static/js/vendor/mathjax-MathJax-24a378e/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('https://university.mongodb.com/static/js/vendor/mathjax-MathJax-24a378e/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff') format('woff'), url('https://university.mongodb.com/static/js/vendor/mathjax-MathJax-24a378e/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('https://university.mongodb.com/static/js/vendor/mathjax-MathJax-24a378e/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff') format('woff'), url('https://university.mongodb.com/static/js/vendor/mathjax-MathJax-24a378e/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('https://university.mongodb.com/static/js/vendor/mathjax-MathJax-24a378e/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff') format('woff'), url('https://university.mongodb.com/static/js/vendor/mathjax-MathJax-24a378e/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('https://university.mongodb.com/static/js/vendor/mathjax-MathJax-24a378e/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff') format('woff'), url('https://university.mongodb.com/static/js/vendor/mathjax-MathJax-24a378e/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf') format('opentype')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+
+<body class="courseware "><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px none; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div style="display: none;" id="MathJax_Message"></div>
+
+  
+
+
+
+
+
+
+
+<header class="global" aria-label="Global Navigation">
+  <nav>
+    <h1 class="logo"><a href="https://university.mongodb.com/"><img src="hello_world.tpl_files/MongoDB_University_Logo.png"></a></h1>
+    
+        <div class="greeting">
+          Hi,
+        sreeh710
+        </div>
+ 
+    <ul class="nav">
+      <li><a href="https://university.mongodb.com/courses">Catalog</a></li>
+      <li><a href="https://university.mongodb.com/verify_certificate">Verify Certification</a></li>
+      <li><a href="http://ed-blog.mongodb.com/">Blog</a></li>
+
+      <li><a href="https://university.mongodb.com/help">Help</a></li>
+ 
+      <li class="user">
+        <div class="username-button button">
+
+          <a href="https://university.mongodb.com/dashboard" class="user-link">My Courses</a>
+          <a href="#" class="dropdown">▾</a>
+        </div>
+        <ul class="dropdown-menu">
+          <li><a href="https://university.mongodb.com/dashboard">Dashboard</a></li>
+          <li><a href="https://university.mongodb.com/help">Help</a></li>
+          <li><a href="https://university.mongodb.com/logout">Log Out</a></li>
+        </ul>
+      </li>
+
+
+</ul></nav></header>
+
+
+<div class="ie-banner"><strong>Warning:</strong> Your browser is not fully supported. We strongly recommend using <a href="https://www.google.com/intl/en/chrome/browser/" target="_blank">Chrome</a> or <a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a>.</div>
+
+
+
+  <section class="content-wrapper">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="courseware course-material">
+  <div class="inner-wrapper">
+    <h1>M101P: MongoDB for Developers</h1>
+    <ol class="course-tabs">
+          <li>
+             <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware" class="active">
+                     Courseware
+             </a>
+          </li>
+          <li>
+             <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/syllabus" class="">
+                     Syllabus
+             </a>
+          </li>
+          <li>
+             <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/discussion/forum" class="">
+                     Discussion
+             </a>
+          </li>
+          <li>
+             <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/course_wiki" class="">
+                     Wiki
+             </a>
+          </li>
+          <li>
+             <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/progress" class="">
+                     Progress
+             </a>
+          </li>
+    
+    </ol>
+    <div class="course-right">
+    
+
+    </div>
+  </div>
+</nav>
+
+
+<section class="container">
+  <div class="course-wrapper">
+    <section aria-label="Course Navigation" class="course-index">
+      <header id="open_close_accordion">
+        <a href="#">close</a>
+      </header>
+
+      <div role="tablist" class="ui-accordion ui-widget ui-helper-reset ui-accordion-icons" id="accordion" style="">
+        <nav>
+          
+
+
+
+    
+  <div class="chapter is-open">
+    <h3 tabindex="0" aria-selected="true" aria-expanded="true" role="tab" class="active ui-accordion-header ui-helper-reset ui-state-default ui-state-active ui-corner-top"><span class="ui-icon ui-icon-triangle-1-s"></span><a tabindex="-1" href="#">Week 1:&nbsp;Introduction</a>
+    </h3>
+
+    <ul role="tabpanel" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active">
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/52546540e2d4231cc6083fd6/">
+              <p>Welcome to M101P</p>
+              <p class="subtitle">Quiz</p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/524af6b2e2d4235f73b619ee/">
+              <p>What is MongoDB?</p>
+              <p class="subtitle">Quiz</p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/52530600e2d4237f053e42ad/">
+              <p>MongoDB Relative to Relational</p>
+              <p class="subtitle">Quiz</p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/5254488be2d4231cc6083fd4/">
+              <p>Overview of Building an App with MongoDB</p>
+              <p class="subtitle"></p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/52546afae2d4231cc6083fd8/">
+              <p>Quick Introduction to the Mongo Shell</p>
+              <p class="subtitle">Quiz</p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/52546b96e2d4231cc6083fd9/">
+              <p>Introduction to JSON</p>
+              <p class="subtitle">Quiz</p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/52546cc8e2d4231cc6083fda/">
+              <p>Installing MongoDB (mac)</p>
+              <p class="subtitle"></p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/525472f0e2d4231cc6083fdb/">
+              <p>Installing MongoDB (windows)</p>
+              <p class="subtitle"></p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/52547394e2d4231cc6083fdc/">
+              <p>Installing Bottle and Python (mac)</p>
+              <p class="subtitle"></p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/52547744e2d4231cc6083fdd/">
+              <p>Installing Python (windows)</p>
+              <p class="subtitle"></p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/5254776ce2d4231cc6083fde/">
+              <p>Installing Bottle.py (windows)</p>
+              <p class="subtitle"></p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/52547788e2d4231cc6083fdf/">
+              <p>Installing PyMongo (mac)</p>
+              <p class="subtitle"></p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/525477b2e2d4231cc6083fe0/">
+              <p>Installing PyMongo (windows)</p>
+              <p class="subtitle"></p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/525477d4e2d4231cc6083fe1/">
+              <p>Hello World, Mongo Style</p>
+              <p class="subtitle"></p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/52547808e2d4231cc6083fe2/">
+              <p>Hello World on a Web Server</p>
+              <p class="subtitle"></p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/5254782ae2d4231cc6083fe3/">
+              <p>MongoDB is Schemaless</p>
+              <p class="subtitle"></p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/52547863e2d4231cc6083fe4/">
+              <p>JSON Revisited</p>
+              <p class="subtitle">Quiz</p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/52547a4ee2d4231cc6083fe5/">
+              <p>JSON Subdocuments</p>
+              <p class="subtitle">Quiz</p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/52547e9be2d4231cc6083fe6/">
+              <p>JSON Spec</p>
+              <p class="subtitle"></p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/52547f8be2d4231cc6083fe7/">
+              <p>Introduction to Our Class Project, The Blog</p>
+              <p class="subtitle"></p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/52547ff6e2d4231cc6083fe8/">
+              <p>Blog in Relational Tables</p>
+              <p class="subtitle">Quiz</p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/52548047e2d4231cc6083fe9/">
+              <p>Blog in Documents</p>
+              <p class="subtitle">Quiz</p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/525480c9e2d4231cc6083fea/">
+              <p>Introduction to Schema Design</p>
+              <p class="subtitle">Quiz</p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/5254815ae2d4231cc6083feb/">
+              <p>Introduction to Python</p>
+              <p class="subtitle">Quiz</p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/525481b2e2d4231cc6083fec/">
+              <p>Python Lists</p>
+              <p class="subtitle">Quiz</p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/52548267e2d4231cc6083fee/">
+              <p>Python Lists, Slice Operator</p>
+              <p class="subtitle">Quiz</p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/525483eee2d4231cc6083fef/">
+              <p>Python Lists, Inclusion</p>
+              <p class="subtitle">Quiz</p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/525484bde2d4231cc6083ff0/">
+              <p>Python, Working with Dicts</p>
+              <p class="subtitle">Quiz</p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/5254852fe2d4231cc6083ff1/">
+              <p>Python: Dicts and Lists Together</p>
+              <p class="subtitle">Quiz</p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/52548584e2d4231cc6083ff2/">
+              <p>Python: for Loops, with Lists</p>
+              <p class="subtitle">Quiz</p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/52548699e2d4231cc6083ff3/">
+              <p>Python: for Loops with Dicts</p>
+              <p class="subtitle">Quiz</p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/52548a91e2d4231cc6083ff5/">
+              <p>Python: while Loops</p>
+              <p class="subtitle"></p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/52548ad8e2d4231cc6083ff6/">
+              <p>Python: Function Calls</p>
+              <p class="subtitle"></p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/52548b61e2d4231cc6083ff7/">
+              <p>Python: Exception Handling</p>
+              <p class="subtitle"></p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/52548b8fe2d4231cc6083ff8/">
+              <p>Bottle Framework: URL Handlers</p>
+              <p class="subtitle"></p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/52548c4ce2d4231cc6083ff9/">
+              <p>Bottle Framework: Using Views</p>
+              <p class="subtitle"></p>
+            </a>
+          </li>
+          <li class="active ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/52548c72e2d4231cc6083ffa/">
+              <p>Bottle Framework: Handling Form Content</p>
+              <p class="subtitle"></p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/52548cb0e2d4231cc6083ffb/">
+              <p>Bottle Framework: Using Cookies</p>
+              <p class="subtitle"></p>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/52548d3be2d4231cc6083ffd/">
+              <p>Pymongo: Exception Processing</p>
+              <p class="subtitle"></p>
+            </a>
+          </li>
+          <li class=" graded">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/525844b0e2d4233537765335/">
+              <p>Homework 1.1</p>
+              <p class="subtitle">Homework due Jul 01 17:00 UTC&nbsp;2014</p>
+            </a>
+          </li>
+          <li class=" graded">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/52584f07e2d4233537765352/">
+              <p>Homework 1.2</p>
+              <p class="subtitle">Homework due Jul 01 17:00 UTC&nbsp;2014</p>
+            </a>
+          </li>
+          <li class=" graded">
+            <a href="https://university.mongodb.com/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/52584f49e2d4233537765353/">
+              <p>Homework 1.3</p>
+              <p class="subtitle">Homework due Jul 01 17:00 UTC&nbsp;2014</p>
+            </a>
+          </li>
+    </ul>
+  </div>
+
+
+        </nav>
+      </div>
+    </section>
+
+    <section class="course-content">
+      <section class="xmodule_display xmodule_SequenceModule" data-type="Sequence">
+    <div id="sequence_i4x-10gen-M101P-sequential-52548c72e2d4231cc6083ffa" class="sequence" data-id="i4x://10gen/M101P/sequential/52548c72e2d4231cc6083ffa" data-position="1" data-course_modx_root="/courses/10gen/M101P/2014_June/modx" data-prev_section_url="/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/52548c4ce2d4231cc6083ff9/" data-next_section_url="/courses/10gen/M101P/2014_June/courseware/Week_1_Introduction/52548cb0e2d4231cc6083ffb/" data-lesson_format="None" data-display_name="Bottle Framework: Handling Form Content">
+  <nav aria-label="Section Navigation" class="sequence-nav">
+    <div class="sequence-list-wrapper">
+      <ol id="sequence-list">
+        <li>
+          <a class="seq_video progress-NA active" data-element="1" data-title="Lecture">
+            <p>Lecture</p>
+          </a>
+        </li>
+      </ol>
+    <div style="opacity: 0;" class="left-shadow"></div><div style="opacity: 0;" class="right-shadow"></div></div>
+
+    <ul class="sequence-nav-buttons">
+      <li class="prev"><a href="#">Previous</a></li>
+      <li class="next"><a href="#">Next</a></li>
+    </ul>
+  </nav>
+  <div class="download-assets"> 
+  </div>
+  <div class="seq_contents tex2jax_ignore asciimath2jax_ignore">&lt;section
+ class="xmodule_display xmodule_VerticalModule" data-type="None"&gt;
+    &lt;ol class="vert-mod"&gt;
+  &lt;li id="vert-0"&gt;
+    &lt;section class="xmodule_display xmodule_VideoSetModule" 
+data-type="Video"&gt;
+      &lt;h2&gt; Lecture &lt;/h2&gt;
+
+&lt;div id="video_i4x-10gen-M101P-videoset-525db127e2d4233f0d6d03c8" 
+class="video" data-streams="1.0:sUUT-gIS5ik" 
+data-caption-data-dir="10gen_2014_M101P_June" 
+data-show-captions="true"&gt;
+  &lt;div class="tc-wrapper"&gt;
+    &lt;article class="video-wrapper"&gt;
+      &lt;section class="video-player"&gt;
+        &lt;div 
+id="i4x-10gen-M101P-videoset-525db127e2d4233f0d6d03c8"&gt;&lt;/div&gt;
+      &lt;/section&gt;
+
+      &lt;section class="video-controls"&gt;&lt;/section&gt;
+    &lt;/article&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;/section&gt;
+
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;/section&gt;
+</div>
+  <div id="seq_content"><section class="xmodule_display xmodule_VerticalModule" data-type="None">
+    <ol class="vert-mod">
+  <li id="vert-0">
+    <section class="xmodule_display xmodule_VideoSetModule" data-type="Video">
+      <h2> Lecture </h2>
+
+<div id="video_i4x-10gen-M101P-videoset-525db127e2d4233f0d6d03c8" class="video video-load-complete" data-streams="1.0:sUUT-gIS5ik" data-caption-data-dir="10gen_2014_M101P_June" data-show-captions="true">
+  <div class="tc-wrapper">
+    <article class="video-wrapper">
+      <section class="video-player">
+        <iframe src="hello_world.tpl_files/sUUT-gIS5ik.htm" title="YouTube video player" allowfullscreen="1" id="i4x-10gen-M101P-videoset-525db127e2d4233f0d6d03c8" frameborder="0" height="360" width="640"></iframe>
+      </section>
+
+      <section class="video-controls"><div class="slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div style="width: 90.4977%;" class="ui-slider-range ui-widget-header ui-slider-range-min"></div><a style="left: 90.4977%;" class="ui-slider-handle ui-state-default ui-corner-all" href="#"></a></div>
+<div>
+  <ul class="vcr">
+    <li><a class="video_control pause" href="#">Pause</a></li>
+    <li>
+      <div class="vidtime">3:20 / 3:41</div>
+    </li>
+  </ul>
+  <div class="secondary-controls"><div class="speeds">
+  <a href="#">
+    <h3>Speed</h3>
+    <p class="active">1.0x</p>
+  </a>
+  <ol class="video_speeds"><li class="active" data-speed="1.0"><a href="#">1.0x</a></li></ol>
+</div><div class="volume">
+  <a href="#"></a>
+  <div class="volume-slider-container">
+    <div class="volume-slider ui-slider ui-slider-vertical ui-widget ui-widget-content ui-corner-all"><div style="height: 100%;" class="ui-slider-range ui-widget-header ui-slider-range-min"></div><a style="bottom: 100%;" class="ui-slider-handle ui-state-default ui-corner-all" href="#"></a></div>
+  </div>
+</div>
+    <a oldtitle="Fill browser" href="#" class="add-fullscreen">Fill Browser</a>
+  <a href="#" class="quality_control" title="HD">HD</a><a oldtitle="Turn off captions" href="#" class="hide-subtitles">Captions</a></div>
+</div></section>
+    </article><ol style="max-height: 387px;" class="subtitles"></ol>
+  </div>
+</div>
+
+
+</section>
+
+  </li>
+</ol>
+
+</section>
+</div>
+
+  <nav class="sequence-bottom">
+    <ul aria-label="Section Navigation" class="sequence-nav-buttons">
+      <li class="prev"><a href="#">Previous</a></li>
+      <li class="next"><a href="#">Next</a></li>
+    </ul>
+  </nav>
+</div>
+
+
+
+<script type="text/javascript">
+  var sequenceNav;
+  $(document).ready(function() {
+    sequenceNav = new SequenceNav($('.sequence-nav'));
+
+    // download files dropdown
+    $('.dropdown-link').toggle(function() {                                                               
+      $('ul.dropdown-downloads').addClass("expanded");                                                     
+      $('a.dropdown-downloads').addClass("active");                                                             
+    }, function() {                                                                                   
+      $('ul.dropdown-downloads').removeClass("expanded");                                                  
+      $('a.dropdown-downloads').removeClass("active");                                                          
+    }); 
+
+  });
+</script>
+
+</section>
+
+    </section>
+  </div>
+</section>
+
+
+
+    
+  </section>
+
+  
+
+
+<footer class="">
+  <nav>
+    <section class="top">
+      <section class="primary">
+        <a href="http://www.mongodb.com/products/mongodb">Products &amp; Services</a>
+        <a href="http://www.mongodb.com/events">Events</a>
+        <a href="http://www.mongodb.com/partners">Partners</a>
+        <a href="http://www.mongodb.com/customers">Customers</a>
+        <a href="http://www.mongodb.com/about">About MongoDB</a>
+        <a href="https://university.mongodb.com/contact">Contact Us</a>
+        <a href="http://www.mongodb.com/careers">Careers</a>
+      </section>
+
+      <section class="social">
+        <a href="https://twitter.com/mongodbinc"><img src="hello_world.tpl_files/Twitter_Green.png"></a>
+        <a href="http://www.facebook.com/mongodb"><img src="hello_world.tpl_files/Facebook_Green.png"></a>
+        <a href="http://www.linkedin.com/company/783611"><img src="hello_world.tpl_files/LinkedIn_Green.png"></a>
+        <a href="https://plus.google.com/101024085748034940765/posts"><img src="hello_world.tpl_files/Google_Plus_Green.png"></a>
+      </section>
+    </section>
+
+    <section class="bottom">
+      <section class="copyright">
+          <a class="footerlogo10gen" href="http://www.mongodb.com/">&nbsp;</a>
+          <div class="copyright-text">© 2014 MongoDB, Inc. MongoDB®, Mongo®, and the leaf logo are registered trademarks of MongoDB Inc.</div>
+          <a class="footerlogoedx" href="http://edx.org/">&nbsp;</a>
+      </section>
+    </section>
+
+  </nav>
+</footer>
+
+
+  
+    <script type="text/javascript" src="hello_world.tpl_files/lms-application.js" charset="utf-8"></script>
+
+
+  
+    <script type="text/javascript" src="hello_world.tpl_files/lms-modules.js" charset="utf-8"></script>
+
+
+
+  
+  <script type="text/javascript" src="hello_world.tpl_files/jquery_002.js"></script>
+  <script type="text/javascript" src="hello_world.tpl_files/jquery_005.js"></script>
+
+
+  
+    <script type="text/javascript" src="hello_world.tpl_files/lms-courseware.js" charset="utf-8"></script>
+
+
+  
+    <script type="text/javascript" src="hello_world.tpl_files/discussion.js" charset="utf-8"></script>
+
+
+
+  
+
+
+
+<script type="text/x-mathjax-config;executed=true">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [
+        ["\\(","\\)"],
+        ['[mathjaxinline]','[/mathjaxinline]']
+      ],
+      displayMath: [
+        ["\\[","\\]"],
+        ['[mathjax]','[/mathjax]']
+      ]
+    }
+  });
+</script>
+
+<!-- This must appear after all mathjax-config blocks, so it is after the imports from the other templates.
+     It can't be run through static.url because MathJax uses crazy url introspection to do lazy loading of
+     MathJax extension libraries -->
+<script type="text/javascript" src="hello_world.tpl_files/MathJax.js"></script>
+
+<script type="text/template" id="_content"><div class="discussion-content local{{#content.roles}} role-{{name}}{{/content.roles}}">
+  <div class="discussion-content-wrapper">
+    <div class="discussion-votes">
+      <a class="discussion-vote discussion-vote-up" href="javascript:void(0)" value="up">&#9650;</a>
+      <div class="discussion-votes-point">{{content.votes.point}}</div>
+      <a class="discussion-vote discussion-vote-down" href="javascript:void(0)" value="down">&#9660;</a>
+    </div>
+    <div class="discussion-right-wrapper">
+      <ul class="admin-actions">
+        <li style="display: none;"><a href="javascript:void(0)" class="admin-endorse">Endorse</a></li>
+        <li style="display: none;"><a href="javascript:void(0)" class="admin-edit">Edit</a></li>
+        <li style="display: none;"><a href="javascript:void(0)" class="admin-delete">Delete</a></li>
+        {{#thread}}
+          <li style="display: none;"><a href="javascript:void(0)" class="admin-openclose">{{close_thread_text}}</a></li>
+        {{/thread}}
+      </ul>
+      {{#thread}}
+        <a class="thread-title" name="{{content.id}}" href="javascript:void(0)">{{content.displayed_title}}</a>
+      {{/thread}}
+      <div class="discussion-content-view">
+        <a name="{{content.id}}" style="width: 0; height: 0; padding: 0; border: none;"></a>
+        <div class="content-body {{content.type}}-body" id="content-body-{{content.id}}">{{content.displayed_body}}</div>
+        {{#thread}}
+          <div class="thread-tags">
+            {{#content.tags}}
+              <a class="thread-tag" href="{{##url_for_tags}}{{.}}{{/url_for_tags}}">{{.}}</a>
+            {{/content.tags}}
+          </div>
+        {{/thread}}
+        <div class="context">
+            {{#content.courseware_location}}
+               (this post is about <a href="../../jump_to/{{content.courseware_location}}">{{content.courseware_title}}</a>)
+            {{/content.courseware_location}}
+        </div>
+        <div class="info">
+          <div class="comment-time">
+            {{#content.updated}}
+              updated
+            {{/content.updated}}
+            <span class="timeago" title="{{content.updated_at}}">{{content.created_at}}</span> by
+            {{#content.anonymous}}
+              anonymous
+            {{/content.anonymous}}
+            {{^content.anonymous}}
+              <a href="{{##url_for_user}}{{content.user_id}}{{/url_for_user}}" class="{{#content.roles}}author-{{name}} {{/content.roles}}">{{content.username}}</a>
+            {{/content.anonymous}}
+          </div>
+          <div class="show-comments-wrapper">
+            {{#thread}}
+              {{#partial_comments}}
+                <a href="javascript:void(0)" class="discussion-show-comments first-time">Show all comments (<span class="comments-count">{{content.comments_count}}</span> total)</a>
+              {{/partial_comments}}
+              {{^partial_comments}}
+                <a href="javascript:void(0)" class="discussion-show-comments">Show <span class="comments-count">{{content.comments_count}}</span> {{##pluralize}}{{content.comments_count}} comment{{/pluralize}}</a>
+              {{/partial_comments}}
+            {{/thread}}
+          </div>
+          <ul class="discussion-actions">
+            {{^max_depth}}
+              <li><a class="discussion-link discussion-reply discussion-reply-{{content.type}}" href="javascript:void(0)">Reply</a></li>
+            {{/max_depth}}
+            {{#thread}}
+              <li><div class="follow-wrapper"><a class="discussion-link discussion-follow-thread" href="javascript:void(0)">Follow</a></div></li>
+            {{/thread}}
+            <li><a class="discussion-link discussion-permanent-link" href="{{content.permalink}}">Permanent Link</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+<script type="text/template" id="_inline_thread_show"><div class="discussion-post local">
+    <div><a href="javascript:void(0)" class="dogear action-follow" data-tooltip="follow"></a></div>
+    <header>
+        <a href="#" class="vote-btn discussion-vote discussion-vote-up" data-role="discussion-vote" data-tooltip="vote"><span class="plus-icon">+</span> <span class='votes-count-number'>{{votes.up_count}}</span></a>
+        <h3>{{title}}</h3>
+        <p class="posted-details">
+            {{#user}}
+            <a href="{{user_url}}" class="username">{{username}}</a>
+            {{/user}}
+            {{^user}}
+            anonymous
+            {{/user}}
+
+            <span class="timeago" title="{{created_at}}">{{created_at}}</span>
+
+            <span class="post-status-closed top-post-status" style="display: none">
+                &bull; This thread is closed.
+            </span>
+        </p>
+    </header>
+    <div class="post-body">{{abbreviatedBody}}</div>
+
+    <ul class="moderator-actions post-extended-content">
+        <li style="display: none"><a class="action-edit" href="javascript:void(0)"><span class="edit-icon"></span> Edit</a></li>
+        <li style="display: none"><a class="action-delete" href="javascript:void(0)"><span class="delete-icon"></span> Delete</a></li>
+        <li style="display: none"><a class="action-openclose" href="javascript:void(0)"><span class="edit-icon"></span> Close</a></li>
+    </ul>
+</div>
+</script>
+<script type="text/template" id="_reply"><form class="discussion-reply-new">
+  <ul class="discussion-errors"></ul>
+  <div class="reply-body"></div>
+  <input type="checkbox" class="discussion-post-anonymously" id="discussion-post-anonymously-{{id}}" />
+  <label for="discussion-post-anonymously-{{id}}">post anonymously</label>
+  {{#showWatchCheckbox}}
+  <input type="checkbox" class="discussion-auto-watch" id="discussion-autowatch-{{id}}" checked />
+  <label for="discussion-auto-watch-{{id}}">follow this thread</label>
+  {{/showWatchCheckbox}}
+  <br />
+  <div class="reply-post-control">
+    <a class="discussion-cancel-post" href="javascript:void(0)">Cancel</a>
+    <a class="discussion-submit-post control-button" href="javascript:void(0)">Submit</a>
+  </div>
+</form>
+</script>
+<script type="text/template" id="_profile_thread"><article class="discussion-article" data-id="{{id}}">
+    <div class="local"><a href="javascript:void(0)" class="dogear action-follow"></a></div>
+    <div class="discussion-post local">
+        <header>
+            <a href="#" class="vote-btn discussion-vote discussion-vote-up" data-role="discussion-vote"><span class="plus-icon">+</span> <span class='votes-count-number'>{{votes.up_count}}</span></a>
+            <h3>{{title}}</h3>
+            <p class="posted-details">                
+                {{#user}}
+                <a href="{{user_url}}" class="username">{{username}}</a>
+                {{/user}}
+                {{^user}}
+                anonymous
+                {{/user}}
+
+                <span class="timeago" title="{{created_at}}">{{created_at}}</span>
+                <span class="post-status-closed top-post-status" style="display: none">
+                    &bull; This thread is closed.
+                </span>
+            </p>
+        </header>
+        <div class="post-body">{{abbreviatedBody}}</div>
+    </div>
+    <ol class="responses post-extended-content">
+        <li class="loading"></li>
+    </ol>
+
+    <div class="local post-tools">
+        <a href="{{permalink}}">View discussion</a>
+        <!-- <a href="javascript:void(0)" class="collapse-post">Hide discussion</a> -->
+    </div>
+
+</article>
+</script>
+<script type="text/template" id="_edit_thread"><form class="discussion-content-edit discussion-thread-edit" _id="{{id}}">
+  <ul class="discussion-errors discussion-update-errors"></ul>    
+  <input type="text" class="thread-title-edit title-input" placeholder="Title" value="{{title}}"/>
+  <div class="thread-body-edit body-input">{{body}}</div>
+  <input class="thread-tags-edit" placeholder="Tags" value="{{tags}}" />
+  <div class = "edit-post-control">
+    <a class="discussion-cancel-update" href="javascript:void(0)">Cancel</a>
+    <a class="discussion-submit-update control-button" href="javascript:void(0)">Update</a>
+  </div>
+</form>
+</script>
+<script type="text/template" id="_inline_thread"><article class="discussion-article" data-id="{{id}}">
+
+    <div class="thread-content-wrapper"></div>
+
+    <ol class="responses post-extended-content">
+        <li class="loading"><div class="loading-animation"></div></li>
+    </ol>
+    <form class="local discussion-reply-new post-extended-content"  data-id="{{id}}">
+        <h4>Post a response:</h4>
+        <ul class="discussion-errors"></ul>
+        <div class="reply-body" data-id="{{id}}"></div>
+        <div class="reply-post-control">
+            <a class="discussion-submit-post control-button" href="#">Submit</a>
+        </div>
+    </form>
+
+    <div class="local post-tools">
+        <a href="javascript:void(0)" class="expand-post">View discussion</a>
+        <a href="javascript:void(0)" class="collapse-post">Hide discussion</a>
+    </div>
+
+</article></script>
+<script type="text/template" id="_user_profile"><section class="discussion-user-threads" >
+    <section class="discussion">
+            {{#threads}}
+                <article class="discussion-thread" id="thread_{{id}}">
+                </article>
+            {{/threads}}
+    </div>
+    <section class="pagination">
+    </section>
+</section>
+</script>
+<script type="text/template" id="_pagination"><nav class="discussion-{{discussiontype}}-paginator discussion-paginator local">
+    <ol>
+        {{#previous}}
+        <li><a class="discussion-pagination" href="{{url}}" data-page-number="{{number}}">&lt; Previous</a></li>
+        {{/previous}}
+        {{#first}}
+        <li><a class="discussion-pagination" href="{{url}}" data-page-number="1">1</a></li>
+        {{/first}}
+        {{#leftdots}}
+        <li>&hellip;</li>
+        {{/leftdots}}
+
+        {{#lowPages}}
+        <li><a class="discussion-pagination" href="{{url}}" data-page-number="{{number}}">{{number}}</a></li>
+        {{/lowPages}}
+        <li class="current-page">{{page}}</li>
+        {{#highPages}}
+        <li><a class="discussion-pagination" href="{{url}}" data-page-number="{{number}}">{{number}}</a></li>
+        {{/highPages}}
+
+        {{#rightdots}}
+        <li>&hellip;</li>
+        {{/rightdots}}
+        {{#last}}
+        <li><a class="discussion-pagination" href="{{url}}" data-page-number="{{number}}">{{number}}</a></li>
+        {{/last}}
+        {{#next}}
+        <li><a class="discussion-pagination" href="{{url}}" data-page-number="{{number}}">Next &gt;</a></li>
+        {{/next}}
+    </ol>
+</nav>
+
+</script>
+<script type="text/template" id="_inline_discussion"><section class="discussion" data-discussion-id="{{discussionId}}">
+    
+
+    <article class="new-post-article">
+        <span class="topic"  data-discussion-id="{{discussionId}}" />
+        <div class="inner-wrapper">
+            <div class="new-post-form-errors">
+            </div>
+            <form class="new-post-form">
+                <div class="form-row">
+                    <input type="text" class="new-post-title" name="title" placeholder="Title">
+                </div>
+                <div class="form-row">
+                    <div class="new-post-body" name="body" placeholder="Enter your question or comment&hellip;"></div>
+                    <!---<div class="new-post-preview"><span class="new-post-preview-label">Preview</span></div>-->
+                </div>
+                {{! TODO tags: Getting rid of tags for now. }}
+                {{!<div class="form-row">}}
+                {{!    <input type="text" class="new-post-tags" name="tags" placeholder="Tags">}}
+                {{!</div>}}
+                <input type="submit" class="submit" value="Add post">
+                <a href="#" class="new-post-cancel">Cancel</a>
+                <div class="options">
+                    <input type="checkbox" name="follow" class="discussion-follow" class="discussion-follow" id="new-post-follow" checked><label for="new-post-follow">follow this post</label>
+                    <br>
+                    {{#allow_anonymous}}
+                        <input type="checkbox" name="anonymous" class="discussion-anonymous" id="new-post-anonymous"><label for="new-post-anonymous">post anonymously</label>
+                    {{/allow_anonymous}}
+                    {{#allow_anonymous_to_peers}}
+                        <input type="checkbox" name="anonymous" class="discussion-anonymous-to-peers" id="new-post-anonymous-to-peers"><label for="new-post-anonymous-to-peers">post anonymously to classmates</label>
+                    {{/allow_anonymous_to_peers}}
+                </div>
+            </form>
+        </div>
+    </article>
+
+    <section class="threads">
+        {{#threads}}
+            <article class="discussion-thread" id="thread_{{id}}">
+            </article>
+        {{/threads}}
+    </section>
+
+    <section class="pagination">
+    </section>
+</section>
+</script>
+<script type="text/template" id="_edit_comment"><form class="discussion-content-edit discussion-comment-edit" _id="{{id}}">
+  <ul class="discussion-errors discussion-update-errors"></ul>    
+  <div class="comment-body-edit body-input">{{body}}</div>
+  <div class = "edit-post-control">
+    <a class="discussion-cancel-update" href="javascript:void(0)">Cancel</a>
+    <a class="discussion-submit-update control-button" href="javascript:void(0)">Update</a>
+  </div>
+</form>
+</script>
+<script type="text/template" id="_new_post"><form class="new-post-form collapsed" id="new-post-form" style="display: block; ">
+  <ul class="new-post-form-errors discussion-errors"></ul>
+  <input type="text" class="new-post-title title-input" placeholder="Title" />
+  <div class="new-post-similar-posts-wrapper" style="display: none"></div>
+  <div class="new-post-body reply-body"></div>
+  {{! TODO tags: Getting rid of tags for now. }}
+  {{! <input class="new-post-tags" placeholder="Tags" /> }}
+  <div class="post-options">
+    <input type="checkbox" class="discussion-post-anonymously" id="discussion-post-anonymously-${discussion_id}">
+    <label for="discussion-post-anonymously-${discussion_id}">post anonymously</label>
+    <input type="checkbox" class="discussion-auto-watch" id="discussion-autowatch-${discussion_id}" checked="">
+    <label for="discussion-auto-watch-${discussion_id}">follow this thread</label>
+  </div>
+  <div class="new-post-control post-control">        
+    <a class="discussion-cancel-post" href="javascript:void(0)">Cancel</a>
+    <a class="discussion-submit-post control-button" href="javascript:void(0)">Submit</a>
+  </div>
+</form>
+</script>
+
+
+  <!-- TODO: http://docs.jquery.com/Plugins/Validation -->
+  <script type="text/javascript">
+    document.write('\x3Cscript type="text/javascript" src="' +
+        document.location.protocol + '//www.youtube.com/player_api">\x3C/script>');
+  </script><script type="text/javascript" src="hello_world.tpl_files/player_api"></script>
+
+  <script type="text/javascript">
+    var $$course_id = "10gen/M101P/2014_June";
+
+    $(function(){
+        $(".ui-accordion-header a, .ui-accordion-content .subtitle").each(function() {
+          var elemText = $(this).text().replace(/^\s+|\s+$/g,''); // Strip leading and trailing whitespace
+          var wordArray = elemText.split(" ");
+          var finalTitle = "";
+          if (wordArray.length > 0) {
+            for (i=0;i<=wordArray.length-1;i++) {
+              finalTitle += wordArray[i];
+              if (i == (wordArray.length-2)) {
+                finalTitle += "&nbsp;";
+              } else if (i == (wordArray.length-1)) {
+                // Do nothing
+              } else {
+                finalTitle += " ";
+              }
+            }
+          }
+          $(this).html(finalTitle);
+        });
+      });
+    $(document).ready(function(){
+       var activeElem = $('#accordion li.active');
+       if(activeElem.length > 0){
+            $('#accordion').scrollTop(activeElem.position().top);
+       }
+    });
+  </script>
+  
+
+
+
+
+
+<div style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px none; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-size-adjust: none; font-family: 'MathJax_Size1',sans-serif;" id="MathJax_Font_Test"></div></body></html>
